@@ -66,6 +66,7 @@ header .container {
 
 .sobre-text {    
     height:320px;
+    padding-bottom: 350px;
 }
 
 .conteudo {
@@ -181,5 +182,12 @@ header .container {
     .sobre img {
         width: 100%;
         height: auto; /* Isso mantém a proporção da imagem */
+    }
+}
+
+@media (max-width:1300px) {
+    .tamanho-tenis {
+        grid-template-columns: repeat(4, 1fr);
+
     }
 }
