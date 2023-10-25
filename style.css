@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    background-color:rgb(47, 47, 245,0.85);
+    color:white;
+    padding: 16px;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.top-bar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-bar li a {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-bar li {
+    margin-left: 20px; /* ajuste conforme necessário */
+}
+.sobre img {
+    width: 320px;
+    height: 320px;
+}
+
+.sobre {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 56px;
+    height: 100%;
+}
+
+.titulo-section {
+    color: rgb(40, 40, 155);
+    margin-bottom:24px;
+    padding-bottom:24px;
+    border-bottom: solid blue ;
+}
+
+
+.sobre-text {    
+    height:320px;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-produtos {
+    margin-top:96px;
+}
+
+.produtos img {
+    height: 225px;
+    width: 225px;
+}
+
+.produtos {
+    margin-top:32px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 5%;
+    row-gap: 5%;
+}
+
+.produtos h3 {
+    margin-top:36px;
+    margin-bottom:12px;
+}
+
+
+.tamanho-tenis {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-width: calc(5 * 40px + 4 * 10px);
+    text-align: center;
+    margin-bottom:12px;
+}
+
+.tamanho-tenis li {
+    display: inline-block;
+}
+
+.tamanho-tenis button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tamanho-tenis button:hover {
+    background-color: #0056b3;
+}
+
+.produto button {
+    display: block;
+    margin-top: 20px; /* Espaçamento em relação aos botões de tamanho */
+    padding: 12px 20px; /* Padding maior para dar ênfase ao botão principal */
+    font-size: 16px;
+    font-weight: bold; /* Letra em negrito para dar destaque */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Adiciona um efeito de transformação ao botão quando for clicado */
+
+    /* Sombra para dar uma sensação de elevação ao botão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.adicionar-button {
+    background-color: #929da3;
+}
+
+.produto button:hover {
+    background-color: #929da3; /* Uma cor mais escura ao passar o mouse */
+}
+
+.produto button:active {
+    transform: scale(0.97); /* Efeito de "press" ao clicar no botão */
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+    .sobre {
+        flex-direction: column;  /* ou 'column', dependendo do que você quer */
+    }
+    .produtos {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .sobre img {
+        width: 100%;
+        height: auto; /* Isso mantém a proporção da imagem */
+    }
+}
+
+@media (max-width:640px) {
+    .sobre {
+        flex-direction: column;  /* ou 'column', dependendo do que você quer */
+    }
+    .produtos {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .top-bar ul {
+        flex-direction: column;
+    }
+    .sobre img {
+        width: 100%;
+        height: auto; /* Isso mantém a proporção da imagem */
+    }
+}
